@@ -44,26 +44,7 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        // //check if 'registered' role exists
-        // if (!Role::where('name', 'registered')->exists()) {
-        //     //create 'registered' role
-        //     Role::create(['name' => 'registered']);
-        // }
-        // //check if 'admin' role exists
-        // if (!Role::where('name', 'admin')->exists()) {
-        //     //create 'admin' role
-        //     Role::create(['name' => 'admin']);
-        // }
-        // if (!Role::where('name', 'subscriber')->exists()) {
-        //     //create 'subscriber' role
-        //     Role::create(['name' => 'subscriber']);
-        // }
-        // if (!Role::where('name', 'premium')->exists()) {
-        //     //create 'premium' role
-        //     Role::create(['name' => 'premium']);
-        // }
-        
-
+        //assign 'registered' role to users as default
         $role = Role::findByName('registered');
         $user->assignRole($role);
 
