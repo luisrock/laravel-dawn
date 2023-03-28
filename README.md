@@ -1,15 +1,13 @@
-<p align="center">Laravel Dawn</p>
+## Laravel Dawn
 
-## About Laravel Dawn
-
-Starter pack with Laravel 10, Ahtuentication by Laravel Breeze, Roles and Permissions by Spatie laravel-permission and basic admin UI (Tailwind CSS) for managing users, roles and permissions.
+Starter pack with Laravel 10, Authentication by Laravel Breeze, Roles and Permissions by Spatie laravel-permission and basic admin UI (Tailwind CSS) for managing users, roles and permissions.
 
 ## Instructions
 
 1. clone https://github.com/luisrock/laravel-dawn.git
 2. mv laravel-dawn [newname]
-(if not using valet, skip next step)
 3. valet secure [newname] 
+(if not using valet, skip it)
 4. cd [newname]
 5. cp .env.example .env
 6. nano .env (add db credentials)
@@ -31,9 +29,9 @@ Initial roles and permissions:
 
  ## Superadmin credentials
 
-username: admin
-email: admin@admin.com
-password: abc12345
+- username: admin
+- email: admin@admin.com
+- password: abc12345
 
 Enjoy!
 
