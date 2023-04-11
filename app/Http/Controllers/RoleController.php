@@ -30,7 +30,7 @@ class RoleController extends Controller
         $role = Role::create(['name' => $request->input('name')]);
         $role->givePermissionTo($request->input('permissions'));
 
-        return redirect()->route('roles.index')->with('success', 'Role created successfully');
+        return redirect()->route('roles.index')->with('success', __('Role created successfully'));
     }
 
     public function show(Role $role)
@@ -54,12 +54,12 @@ class RoleController extends Controller
         $role->update(['name' => $request->input('name')]);
         $role->syncPermissions($request->input('permissions'));
 
-        return redirect()->route('roles.index')->with('success', 'Role updated successfully');
+        return redirect()->route('roles.index')->with('success', __('Role updated successfully'));
     }
 
     public function destroy(Role $role)
     {
         $role->delete();
-        return redirect()->route('roles.index')->with('success', 'Role deleted successfully');
+        return redirect()->route('roles.index')->with('success', __('Role deleted successfully'));
     }
 }

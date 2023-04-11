@@ -1,0 +1,9 @@
+@if(auth()->check())
+    <x-app-layout>
+        @include('contact-inner')
+    </x-app-layout>
+@else
+    <x-guest-layout>
+        @include('contact-inner')
+    </x-guest-layout>
+@endif

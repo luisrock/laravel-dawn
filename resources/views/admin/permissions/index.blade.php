@@ -11,9 +11,9 @@
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead class="bg-gray-50">
                             <tr>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{{ __('ID') }}</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{{ __('Name') }}</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{{ __('Actions') }}</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
@@ -23,13 +23,13 @@
                                     <td class="px-6 py-4 whitespace-nowrap">{{ $permission->name }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <a href="{{ route('permissions.edit', $permission) }}" class="inline-flex items-center px-4 py-2 bg-blue-500 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-600 active:bg-blue-900 focus:outline-none focus:border-blue-900 focus:ring ring-blue-300 disabled:opacity-25 transition ease-in-out duration-150">
-                                            Edit
+                                            {{ __('Edit') }}
                                         </a>
                                         <form action="{{ route('permissions.destroy', $permission) }}" method="POST" class="inline" onsubmit="return confirmDelete();">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="inline-flex items-center px-4 py-2 bg-red-500 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-600 active:bg-red-900 focus:outline-none focus:border-red-900 focus:ring ring-red-300 disabled:opacity-25 transition ease-in-out duration-150">
-                                                Delete
+                                                {{ __('Delete') }}
                                             </button>
                                         </form>
                                     </td>
@@ -44,7 +44,8 @@
     </div>
     <script>
         function confirmDelete() {
-            return confirm('Are you sure you want to remove this permission?');
+            let askFirstTextTranslatable = "{{ __('Are you sure you want to remove this permission?') }}";
+            return confirm( askFirstTextTranslatable );
         }
     </script>
     

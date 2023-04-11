@@ -10,35 +10,46 @@
         <div id="sidebar-menu" class="hidden md:block w-full md:w-64 bg-gray-800 dark:bg-gray-900 p-4 flex-shrink-0">
             <nav class="mt-5">
                 <div class="mb-4">
-                    <h2 class="text-lg font-semibold text-white">Users</h2>
+                    <h2 class="text-lg font-semibold text-white">{{ __('Users') }}</h2>
                     <ul>
                         <li class="py-1">
-                            <a href="{{ route('users.index') }}" class="text-gray-300 hover:text-white">List Users</a>
+                            <a href="{{ route('users.index') }}" class="text-gray-300 hover:text-white">{{ __('List Users') }}</a>
                         </li>
                         <li class="py-1">
-                            <a href="{{ route('users.create') }}" class="text-gray-300 hover:text-white">Create User</a>
+                            <a href="{{ route('users.create') }}" class="text-gray-300 hover:text-white">{{ __('Create User') }}</a>
                         </li>
                     </ul>
                 </div>
                 <div class="mb-4">
-                    <h2 class="text-lg font-semibold text-white">Roles</h2>
+                    <h2 class="text-lg font-semibold text-white">{{ __('Roles') }}</h2>
                     <ul>
                         <li class="py-1">
-                            <a href="{{ route('roles.index') }}" class="text-gray-300 hover:text-white">List Roles</a>
+                            <a href="{{ route('roles.index') }}" class="text-gray-300 hover:text-white">{{ __('List Roles') }}</a>
                         </li>
                         <li class="py-1">
-                            <a href="{{ route('roles.create') }}" class="text-gray-300 hover:text-white">Create Role</a>
+                            <a href="{{ route('roles.create') }}" class="text-gray-300 hover:text-white">{{ __('Create Role') }}</a>
                         </li>
                     </ul>
                 </div>
                 <div class="mb-4">
-                    <h2 class="text-lg font-semibold text-white">Permissions</h2>
+                    <h2 class="text-lg font-semibold text-white">{{ __('Permissions') }}</h2>
                     <ul>
                         <li class="py-1">
-                            <a href="{{ route('permissions.index') }}" class="text-gray-300 hover:text-white">List Permissions</a>
+                            <a href="{{ route('permissions.index') }}" class="text-gray-300 hover:text-white">{{ __('List Permissions') }}</a>
                         </li>
                         <li class="py-1">
-                            <a href="{{ route('permissions.create') }}" class="text-gray-300 hover:text-white">Create Permission</a>
+                            <a href="{{ route('permissions.create') }}" class="text-gray-300 hover:text-white">{{ __('Create Permission') }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mb-4">
+                    <h2 class="text-lg font-semibold text-white">{{ __('Products') }}</h2>
+                    <ul>
+                        <li class="py-1">
+                            <a href="{{ route('products.index') }}" class="text-gray-300 hover:text-white">{{ __('List Products') }}</a>
+                        </li>
+                        <li class="py-1">
+                            <a href="{{ config('services.stripe.dash_link') . '/dashboard' }}" class="text-gray-300 hover:text-white" target="_blank">{{ __('Stripe Dash') }}</a>
                         </li>
                     </ul>
                 </div>

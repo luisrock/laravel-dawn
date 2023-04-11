@@ -60,7 +60,8 @@ return [
         'single' => [
             'driver' => 'single',
             'path' => storage_path('logs/laravel.log'),
-            'level' => env('LOG_LEVEL', 'debug'),
+            'level' => env('APP_LOG_ENABLED', true) ? env('LOG_LEVEL', 'debug') : 'emergency',
+            // 'level' => env('LOG_LEVEL', 'debug'),
         ],
 
         'daily' => [
